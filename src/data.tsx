@@ -1,0 +1,38 @@
+export const aespaMembers = [
+    {
+      id: 1,
+      name: "Karina",
+      realName: "Yoo Jimin (유지민)",
+      position: "Leader, Main Dancer, Lead Rapper, Center",
+      birthday: "2000-04-11",
+      nationality: "Korean",
+      image: "karina.jpeg",
+    },
+    {
+      id: 2,
+      name: "Giselle",
+      realName: "Aeri Uchinaga (うちながえり)",
+      position: "Main Rapper, Sub Vocalist",
+      birthday: "2000-10-30",
+      nationality: "Japanese-Korean",
+      image: "redselle.jpg",
+    },
+    {
+      id: 3,
+      name: "Winter",
+      realName: "Kim Minjeong (김민정)",
+      position: "Lead Vocalist, Lead Dancer, Visual",
+      birthday: "2001-01-01",
+      nationality: "Korean",
+      image: "winter.jpg",
+    },
+    {
+      id: 4,
+      name: "NingNing",
+      realName: "Ning Yizhuo (宁艺卓)",
+      position: "Main Vocalist",
+      birthday: "2002-10-23",
+      nationality: "Chinese",
+      image: "ningning.jpg",
+    },
+  ];
