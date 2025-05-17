@@ -1,0 +1,35 @@
+.projects {
+  padding: 2rem 0;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.project-card {
+  background: #181a20;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  min-width: 220px;
+  max-width: 320px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  text-align: left;
+  color: #fff;
+}
+.project-card h3 {
+  margin: 0.5rem 0 0.2rem 0;
+}
+.project-card p {
+  color: #fff;
+}
+.project-card a {
+  color: #0077cc;
+  text-decoration: none;
+  font-size: 0.98rem;
+} 

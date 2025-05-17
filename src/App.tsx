@@ -1,39 +1,29 @@
+import React, { useState } from 'react';
 import './App.css'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import Background from "./assets/bg3.jpg"
-import { genMember } from './genmember'
+import IDESidebar from './components/IDESidebar'
+import IDEMainArea from './components/IDEMainArea'
+
+const fileLabels: Record<string, string> = {
+  about: 'AboutMe.tsx',
+  skills: 'Skills.tsx',
+  experience: 'Experiences.tsx',
+  contact: 'Contact.tsx',
+};
 
 function App() {
+  const [selected, setSelected] = useState('about');
 
   return (
-
-    <div className='flex flex-col justify-center gap-12 bg-cover bg-center min-h-screen p-4' style={{backgroundImage: `url(${Background})`}}>
-      <div>
-        <h1 className='text-center text-white text-8xl font-extrabold'>GenMate B</h1>
+    <>
+      <div className="ide-titlebar">
+        <span style={{fontWeight: 700, color: '#7ecfff', marginRight: 8}}>●</span>
+        Portfolio <span style={{margin: '0 8px'}}>&gt;</span> anawat_pumunkid <span style={{margin: '0 8px'}}>&gt;</span> {fileLabels[selected]}
       </div>
-      <div className='flex flex-wrap gap-8 justify-center'>
-        {genMember.map((gmember) => (
-          <Card key={gmember.id} className='border border-black'>
-            <h2 className='text-center text-4xl font-bold'>{gmember.name}</h2>
-            <img src={gmember.image} className='w-88 h-88 mx-8 rounded-2xl'/>
-            <Button className='mx-4'>{gmember.name} Info</Button>
-          </Card>
-        ))}
+      <div className="ide-root">
+        <IDESidebar selected={selected} onSelect={setSelected} />
+        <IDEMainArea selected={selected} />
       </div>
-    </div>
-
-    // <div className='flex flex-wrap gap-4 p-4 bg-amber-100 h-screen'>
-    //   {aespaMembers.map((member) =>(
-    //     <Card key={member.id} className='w-[600px] h-[600px] p-4' >
-    //       <img src={member.image} className='w-full h-72' />
-
-    //       <Button>{member.name}</Button>
-    //     </Card>
-
-    //   ))}
-
-    // </div>
+    </>
   )
 }
 
