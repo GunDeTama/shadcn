@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
 import './App.css'
 import IDESidebar from './components/IDESidebar'
 import IDEMainArea from './components/IDEMainArea'
+import { useState } from 'react'
 
 const fileLabels: Record<string, string> = {
   about: 'AboutMe.tsx',
